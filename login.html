@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1f7e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #FFFFFF;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+            width: 250px; 
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        input {
+            width: 90%;
+            padding: 6px; 
+            margin-top: 3px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 8px; 
+            margin-top: 12px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background: #218838;
+        }
+		a {
+			text-align:center;
+			font-family:Arial;
+		}
+		.div-center	{
+			display:flex;
+			justify-content: center;
+			padding-top:5px;
+		}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <label for="first-name">Username:</label>
+            <input type="text" id="first-name" name="first-name" required>
+			
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <button type="submit">Login</button>
+			<div class="div-center">
+				<a href="CreateAccount.html">Create An Account</a>
+			</div>
+        </form>
+    </div>
+
+</body>
+</html>
