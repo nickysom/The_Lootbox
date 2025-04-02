@@ -1,2 +1,21 @@
-/* CSS Document */
+/*Browser Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Red border for the invalid inputs */
+.error_border {
+  border: 2px solid red;
+  outline: none;
+}
+
+/* Error message text */
+.error_message {
+  color: red;
+  font-size: 15px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
 

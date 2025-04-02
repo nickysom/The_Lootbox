@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Loot Box: Create Account</title>
+<link rel="stylesheet" href="css/styles.css">
 <style>
 body {
     font-family: "Times New Roman", Times, serif;
@@ -70,19 +71,18 @@ input, button {
 <body>
 <div class="container">
   <h2>Create Lootbox Account</h2>
-  <form>
-    <label for="first-name">First Name:</label>
-    <input type="text" id="first-name" name="first-name" required>
-    <label for="last-name">Last Name:</label>
-    <input type="text" id="last-name" name="last-name" required>
+  <form id="createAccountsForm">
+    <label for="first-name">Username:</label>
+    <input type="text" id="username" name="username" required>
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" minlength="8" required>
+    <input type="password" id="password" name="password" required>
     <label for="confirm-password">Confirm Password:</label>
-    <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
+    <input type="password" id="confirm_password" name="confirm_password" required>
     <button type="submit">Create Account</button>
   </form>
 </div>
 </body>
+<script src="js/create_accounts.js"></script>
 </html>
