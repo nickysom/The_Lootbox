@@ -344,12 +344,7 @@ Index Home Page - Card Categories
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    to bottom,
-    #4c00a4 25%,
-    #8300c4 55%,
-    #4c00a4 100%
-  );
+  background-color: #8300c4;
   border-top-right-radius: 50px;
 }
 
