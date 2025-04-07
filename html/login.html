@@ -11,39 +11,41 @@
 </head>
 
 <body>
+    <!-- Navbar: Main site navigation -->
     <nav class="navbar navbar-expand-md nav-colors">
         <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
 
-            <div class="d-flex align-items-center">
-                <img src="../images/black_game_cartridge.png" alt="Black Game Cartridge Icon" class="store_icon">
-                <span class="divider me-3 mx-3">|</span>
+            <!-- Logo and brand title -->
+            <div class="d-flex align-items-center gap-3">
+                <img src="../images/the_lootbox_icon.png" alt="Lootbox Icon" class="store_icon">
+                <span class="divider me-3 mx-3"></span>
                 <h1 class="store_title mb-0">The Loot Box</h1>
             </div>
 
+            <!-- Navigation links and utils -->
             <div class="d-flex flex-wrap align-items-center">
 
-                <a class="button button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
-                <a class="button button rounded-pill px-4 py-2 mx-2" href="#">Consoles</a>
-                <a class="button button rounded-pill px-4 py-2 mx-2" href="#">Accessories</a>
+                <!-- Page links -->
+                <a class="button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
+                <a class="button rounded-pill px-4 py-2 mx-2" href="#">Consoles</a>
+                <a class="button rounded-pill px-4 py-2 mx-2" href="#">Accessories</a>
 
-                <!--Search Bar -->
+                <!-- Search bar -->
                 <form class="search_bar d-flex align-items-center mx-2">
                     <input type="search" placeholder="Search" id="search" name="search" class="search_input">
-                    <button type="submit" class="power_btn">
-                        ⏻
-                    </button>
+                    <button type="submit" class="power_btn">⏻</button>
                 </form>
 
-                <a href="../html/login.html">
+                <!-- Account and cart icons -->
+                <a href="login.html">
                     <img src="../images/profile_icon.png" alt="Profile Icon Login" class="profile_icon mx-2">
                 </a>
-
-
                 <a href="#" class="shopping_cart_wrapper">
                     <img src="../images/shopping_cart.png" alt="Cart Icon" class="shopping_cart_icon mx-2">
                 </a>
 
             </div>
+        </div>
     </nav>
 
     <div class="login_center">

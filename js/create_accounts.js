@@ -2,30 +2,29 @@
 console.log("JS file is connected!");
 
 document.addEventListener("DOMContentLoaded", function () {
-	
-//Finds the form in our createaccount.html page
-const form = document.getElementById("createAccountsForm");
 
-// Check if form exists
+  //Finds the form in our createaccount.html page
+  const form = document.getElementById("createAccountsForm");
+
+  // Check if form exists
   if (!form) {
     console.error("Form not found! Check the ID in your HTML.");
     return;
   }
 
-//Checks each field from the form to make sure they're valid inputs
-  const username = document.getElementById("username");
+  //Checks each field from the form to make sure they're valid inputs
   const first_name = document.getElementById("first_name");
   const last_name = document.getElementById("last_name");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirm_password");
-	
-	const fields = [username, email, password, confirmPassword];
-	
-	//Doesn't allow the form to be submitted empty
-	form.addEventListener("submit", function (e) {
-	console.log("Submit handler triggered");
-    e.preventDefault(); 
+
+  const fields = [first_name, last_name, email, password, confirmPassword];
+
+  //Doesn't allow the form to be submitted empty
+  form.addEventListener("submit", function (e) {
+    console.log("Submit handler triggered");
+    e.preventDefault();
 
     let isValid = true;
     clearErrors();
@@ -61,25 +60,39 @@ const form = document.getElementById("createAccountsForm");
       isValid = false;
     }
 
-// Submit if valid
+    // Submit if valid and redirect to login page after 5 secs
     if (isValid) {
-      alert("Account created successfully!");
-      form.submit();
+      form.innerHTML = `
+    <h3 style="text-align: center; margin-bottom: 20px;">Account created successfully!</h3>
+    <p style="text-align: center;">Redirecting to login page in <span id="countdown">10</span> seconds...</p>
+  `;
+
+      // Countdown logic
+      let timeLeft = 10;
+      const countdownEl = document.getElementById("countdown");
+      const countdown = setInterval(() => {
+        timeLeft--;
+        countdownEl.textContent = timeLeft;
+        if (timeLeft === 0) {
+          clearInterval(countdown);
+          window.location.href = "login.html";
+        }
+      }, 1000);
     }
   });
 
-//Shows an error message on the specfic input fields
+  //Shows an error message on the specfic input fields
   function showError(input, message) {
     input.classList.add("error_border");
 
-//Makes a new "div" element so that the field can be styled red
+    //Makes a new "div" element so that the field can be styled red
     let errorMsg = document.createElement("div");
     errorMsg.className = "error_message";
     errorMsg.innerText = message;
-    input.parentNode.appendChild(errorMsg);
+    input.insertAdjacentElement("afterend", errorMsg);
   }
 
-//Resets any errors so revalidation is possible 
+  //Resets any errors so revalidation is possible 
   function clearErrors() {
     fields.forEach((field) => field.classList.remove("error_border"));
     document.querySelectorAll(".error_message").forEach((el) => el.remove());
