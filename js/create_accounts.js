@@ -14,6 +14,8 @@ const form = document.getElementById("createAccountsForm");
 
 //Checks each field from the form to make sure they're valid inputs
   const username = document.getElementById("username");
+  const first_name = document.getElementById("first_name");
+  const last_name = document.getElementById("last_name");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirm_password");
