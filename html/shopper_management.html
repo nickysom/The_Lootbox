@@ -51,7 +51,7 @@
     </nav>
 
     <script>
-        function fillout()
+	function fillout()
             {
                 if (!JSONObject.shopper[0].firstName == "")
                 {
@@ -63,6 +63,8 @@
                     document.getElementById("address").value = JSONObject.shopper[0].address;
                 }
             }
+    </script>
+    <script>
         function makeObject(email, first_name, last_name, phone, age, address)
             {
                 var JSONObject = {"shopper" : [
