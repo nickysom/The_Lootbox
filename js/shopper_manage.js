@@ -32,12 +32,12 @@ function validateMakeObject(email, first_name, last_name, phone, age, address) {
 	}
     JSONObject = {"shopper" : [
         {
-            "email": document.getElementById('email').value,
-            "firstName": document.getElementById('first_name').value,
-            "lastName": document.getElementById('last_name').value,
-            "phone": document.getElementById('phone').value,
-            "age": document.getElementById('age').value,
-            "address": document.getElementById('address').value,
+            "email": email,
+            "firstName": first_name,
+            "lastName": last_name,
+            "phone": phone,
+            "age": age,
+            "address": address,
         }
     ]}
     alert("First Name: " + JSONObject.shopper.firstName + "\nLast Name: " + JSONObject.shopper.lastName + "\nEmail: " + JSONObject.shopper.email + "\nPhone: " + JSONObject.shopper.phone + "\nAge: " + JSONObject.shopper.age + "\nAddress: " + JSONObject.shopper.address)
