@@ -12,7 +12,7 @@
 </head>
 
 
-<body>
+<body onload="fillout()">
     <!-- Navbar: Main site navigation -->
     <nav class="navbar navbar-expand-md nav-colors">
         <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
@@ -50,12 +50,39 @@
         </div>
     </nav>
 
+    <script>
+        function fillout()
+            {
+                if (!JSONObject.shopper[0].firstName == "")
+                {
+                    document.getElementById("email").value = JSONObject.shopper[0].email;
+                    document.getElementById("first_name").value = JSONObject.shopper[0].firstName;
+                    document.getElementById("last_name").value = JSONObject.shopper[0].lastName;
+                    document.getElementById("phone").value = JSONObject.shopper[0].phone;
+                    document.getElementById("age").value = JSONObject.shopper[0].age;
+                    document.getElementById("address").value = JSONObject.shopper[0].address;
+                }
+            }
+        function makeObject(email, first_name, last_name, phone, age, address)
+            {
+                var JSONObject = {"shopper" : [
+			    {
+                    "email": document.getElementById('email').value,
+				    "firstName": document.getElementById('first-name').value,
+				    "lastName": document.getElementById('last-name').value,
+				    "phone": document.getElementById('phone').value,
+                    "age": document.getElementById('age').value,
+                    "address": document.getElementById('address').value,
+			    }
+		]
+            }
+    </script>
 
 
     <div class="login_center account_center">
         <div class="login_card">
             <h2 class="text-center mb-4">Manage Your Information</h2>
-            <form id="createAccountsForm" novalidate>
+            <form id="shopper_management" novalidate onsubmit="return makeObject(document.getElementById('email').value, document.getElementById('first_name').value, document.getElementById('last_name').value, document.getElementById('phone').value, document.getElementById('age').value, document.getElementById('address').value)">
 
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
