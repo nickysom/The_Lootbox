@@ -1,11 +1,11 @@
 let JSONObject = {
     "shopper": {
-        "email": "",
-        "firstName": "",
-        "lastName": "",
-        "phone": "",
-        "age": "",
-        "address": ""
+        "email": "input",
+        "firstName": "input",
+        "lastName": "input",
+        "phone": "input",
+        "age": "input",
+        "address": "input"
     }
 };
 
@@ -33,13 +33,4 @@ function makeObject(email, first_name, last_name, phone, age, address) {
 }
 
 // Populate form fields when the page loads
-window.onload = function() {
-    fillout();
-};
-
-// Event listener for form submission
-document.getElementById('myForm').onsubmit = function(event) {
-    event.preventDefault();
-    makeObject();
-    // Your form submission logic here
-};
+window.onload = fillout;
