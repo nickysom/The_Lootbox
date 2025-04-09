@@ -18,6 +18,7 @@ let JSONObject = {
         document.getElementById("age").value = JSONObject.shopper.age;
         document.getElementById("address").value = JSONObject.shopper.address;
 }
+///^[+]?(\d{1,2})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/  !(/^[1-9]\d{2}-\d{3}-\d{4}/.test(phone) || /^\(\d{3}\)\s\d{3}-\d{4}/.test(phone) || /^[1-9]\d{2}\s\d{3}\s\d{4}/.test(phone) || /^[1-9]\d{2}\.\d{3}\.\d{4}/.test(phone))
 */
 function validateMakeObject(email, first_name, last_name, phone, age, address) {
     if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
@@ -25,7 +26,7 @@ function validateMakeObject(email, first_name, last_name, phone, age, address) {
 		alert("Email must be valid.");
 		return false;
 	}
-    if (!(/^[1-9]\d{2}-\d{3}-\d{4}/.test(phone) || /^\(\d{3}\)\s\d{3}-\d{4}/.test(phone) || /^[1-9]\d{2}\s\d{3}\s\d{4}/.test(phone) || /^[1-9]\d{2}\.\d{3}\.\d{4}/.test(phone)))
+    if (!/^[+]?(\d{1,2})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/)
 	{
 		alert("Phone must be valid.");
 		return false;
