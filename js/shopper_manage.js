@@ -25,7 +25,7 @@ function validateMakeObject(email, first_name, last_name, phone, age, address) {
 		alert("Email must be valid.");
 		return false;
 	}
-    if (!^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$.test(phone))
+    if (!/^\(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/.test(phone))
 	{
 		alert("Phone must be valid.");
 		return false;
