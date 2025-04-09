@@ -1,7 +1,5 @@
 let JSONObject = {"shopper" : [
-		{
-		      "","","","","",""
-		}
+		["","","","","",""]
 ]};
 
 function fillout()
