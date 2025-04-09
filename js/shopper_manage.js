@@ -41,7 +41,7 @@ function validateMakeObject(email, first_name, last_name, phone, age, address) {
             "address": address,
         }
     ]}
-    alert("First Name: " + JSONObject.shopper.firstName + "\nLast Name: " + JSONObject.shopper.lastName + "\nEmail: " + JSONObject.shopper.email + "\nPhone: " + JSONObject.shopper.phone + "\nAge: " + JSONObject.shopper.age + "\nAddress: " + JSONObject.shopper.address)
+    alert("First Name: " + JSONObject.shopper[0].firstName + "\nLast Name: " + JSONObject.shopper[0].lastName + "\nEmail: " + JSONObject.shopper[0].email + "\nPhone: " + JSONObject.shopper[0].phone + "\nAge: " + JSONObject.shopper[0].age + "\nAddress: " + JSONObject.shopper[0].address)
 }
 
 // For future when we have accounts in db.
