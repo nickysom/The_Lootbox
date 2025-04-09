@@ -1,9 +1,6 @@
-let JSONObject = {"shopper" : [
-    {
-        "","","","","",""
-    }
-    ["","","","","",""]
-]};
+let JSONObject = {
+    "shopper": ["", "", "", "", "", ""]
+};
 
 function fillout() {
     if (!JSONObject == null) {
