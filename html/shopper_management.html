@@ -12,7 +12,7 @@
 </head>
 
 
-<body onload="fillout();">
+<body onload="fillout()">
     <!-- Navbar: Main site navigation -->
     <nav class="navbar navbar-expand-md nav-colors">
         <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
@@ -53,7 +53,7 @@
     <script>
 	function fillout()
             {
-                if (!JSONObject.shopper[0].firstName == "")
+                if (!JSONObject.shopper[0] == null)
                 {
                     document.getElementById("email").value = JSONObject.shopper[0].email;
                     document.getElementById("first_name").value = JSONObject.shopper[0].firstName;
@@ -77,7 +77,6 @@
                     "address": document.getElementById('address').value,
 			    }
 		]
-		fillout();
             }
     </script>
 	
