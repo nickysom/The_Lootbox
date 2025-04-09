@@ -26,9 +26,14 @@ function validateMakeObject(email, first_name, last_name, phone, age, address) {
 		alert("Email must be valid.");
 		return false;
 	}
-    if (!/^[+]?(\d{1,2})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/)
+    if (!/^[+]?(\d{1,2})?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(phone))
 	{
 		alert("Phone must be valid.");
+		return false;
+	}
+    if (!/^1[0-9][0-9]$|^[1-9][0-9]$|^[0-9]$/.test(age))
+	{
+		alert("Age must be valid.");
 		return false;
 	}
     JSONObject = {"shopper" : [
