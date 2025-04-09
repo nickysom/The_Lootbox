@@ -10,7 +10,7 @@ let JSONObject = {
 };
 
 
-function fillout() {
+/*function fillout() { //For in the future when we have accounts in a db.
         document.getElementById("email").value = JSONObject.shopper.email;
         document.getElementById("first_name").value = JSONObject.shopper.firstName;
         document.getElementById("last_name").value = JSONObject.shopper.lastName;
@@ -18,7 +18,7 @@ function fillout() {
         document.getElementById("age").value = JSONObject.shopper.age;
         document.getElementById("address").value = JSONObject.shopper.address;
 }
-
+*/
 function makeObject(email, first_name, last_name, phone, age, address) {
     JSONObject = {"shopper" : [
         {
@@ -30,7 +30,8 @@ function makeObject(email, first_name, last_name, phone, age, address) {
             "address": document.getElementById('address').value,
         }
     ]}
+    alert("First Name: " + JSONObject.shopper.firstName + "\nLast Name: " + JSONObject.shopper.lastName + "\nEmail: " + JSONObject.shopper.email + "\nPhone: " + JSONObject.shopper.phone + "\nAge: " + JSONObject.shopper.age + "\nAddress: " + JSONObject.shopper.address)
 }
 
-// Populate form fields when the page loads
-window.onload = fillout;
+// For future when we have accounts in db.
+//window.onload = fillout;
