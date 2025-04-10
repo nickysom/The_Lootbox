@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (isValid) {
       form.innerHTML = `
     <h3 style="text-align: center; margin-bottom: 20px;">Account created successfully!</h3>
-    <p style="text-align: center;">Redirecting to login page in <span id="countdown">10</span> seconds...</p>
+    <p style="text-align: center;">Redirecting to login page in <span id="countdown">5</span> seconds...</p>
   `;
 
       // Countdown logic
-      let timeLeft = 10;
+      let timeLeft = 5;
       const countdownEl = document.getElementById("countdown");
       const countdown = setInterval(() => {
         timeLeft--;
