@@ -2,44 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Loot Box - Product Management</title>
-  <link rel="stylesheet" href="ManStyle.css">
-  
+  <title>The Loot Box: Product Management</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
-  <header>
-    <div class="logo"> The Loot Box</div>
-    <div class="top-right">
-      
-      <input type="text" placeholder="search">
-      <span class="cart">🛒</span>
-    </div>
-    <nav>
-      <a href="#">Consoles</a>
-      <a href="#">Games</a>
-      <a href="#">Accessories</a>
-      <a href="#">Deals</a>
-      <a href="#">Support</a>
-    </nav>
-  </header>
 
-  <main>
+  <!-- Navbar: Main site navigation -->
+  <nav class="nav-colors">
+    <div class="d-flex flex-wrap justify-content-between align-items-center container-fluid">
+
+      <!-- Logo and brand title -->
+      <div class="d-flex align-items-center gap-3">
+        <img src="../images/the_lootbox_icon.png" alt="Lootbox Icon" class="store_icon">
+        <span class="divider me-3 mx-3"></span>
+        <h1 class="store_title mb-0">The Loot Box</h1>
+      </div>
+
+      <!-- Navigation links and utils -->
+      <div class="d-flex flex-wrap align-items-center">
+
+        <!-- Page links -->
+        <a class="button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
+
+        <!-- Search bar -->
+        <form class="search_bar d-flex align-items-center mx-2">
+          <input type="search" placeholder="Search" id="search" name="search" class="search_input">
+          <button type="button" class="power_btn" onclick="searchProduct()">⏻</button>
+        </form>
+
+        <!-- Account and cart icons -->
+        <a href="login.html">
+          <img src="../images/profile_icon.png" alt="Profile Icon Login" class="profile_icon mx-2">
+        </a>
+        <a href="#" class="shopping_cart_wrapper">
+          <img src="../images/shopping_cart.png" alt="Cart Icon" class="shopping_cart_icon mx-2">
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <main class="product_main">
     <div class="button-group">
-      <button class="primary">New Product</button>
-      <button class="primary">Update Product</button>
-      <button class="primary">Delete Product</button>
+      <button class="input_button" onclick="handleAdd()">New Product</button>
+      <button class="input_button" onclick="handleUpdate()">Update Product</button>
+      <button class="input_button" onclick="handleDelete()">Delete Product</button>
     </div>
-
-    <form class="product-form">
-      <input type="text" placeholder="Product ID">
-      <input type="text" placeholder="Manufacturer">
-      <input type="text" placeholder="Product Name">
-      <input type="text" placeholder="Category">
-      <input type="number" placeholder="Quantity">
-      <input type="text" placeholder="Price">
-      <input type="text" placeholder="Weight">
-      <textarea placeholder="Product Description"></textarea>
+  
+    <form class="product-form" onsubmit="return false">
+      <div class="form_field">
+        <label>Product ID</label>
+        <input type="text" id="product_id" placeholder="Product ID" required>
+      </div>
+  
+      <div class="form_field">
+        <label>Product Name</label>
+        <input type="text" id="product_name" placeholder="Product Name" required>
+      </div>
+  
+      <div class="form_field">
+        <label>Serial Number (Optional)</label>
+        <input type="text" id="serial_number" placeholder="Serial Number">
+      </div>
+  
+      <div class="form_field">
+        <label>Category</label>
+        <select id="category" class="category_select" required>
+          <option value="" disabled selected>Select a category</option>
+          <option value="console">Console</option>
+          <option value="game">Game</option>
+          <option value="accessories">Accessories</option>
+          <option value="trading_card">Trading Card</option>
+          <option value="collectors_item">Collector's Item</option>
+          <option value="misc">Misc</option>
+        </select>
+      </div>
+  
+      <div class="form_field">
+        <label>Manufacturer</label>
+        <input type="text" id="manufacturer" placeholder="Manufacturer" required>
+      </div>
+  
+      <div class="form_field">
+        <label>Stock Count</label>
+        <input type="number" id="stock" placeholder="Quantity" required>
+      </div>
+  
+      <div class="form_field">
+        <label>Price</label>
+        <input type="text" id="price" placeholder="Price (USD)" required>
+      </div>
+  
+      <div class="form_field">
+        <label>Weight</label>
+        <input type="text" id="weight" placeholder="Weight (lbs)" required>
+      </div>
+  
+      <div class="form_field full_width">
+        <label>Product Description</label>
+        <textarea id="description" placeholder="Product Description" required></textarea>
+      </div>
     </form>
-  </main>
+    <button class="input_button download_button" onclick="downloadJSON()">Download Product JSON</button>
+  </main>  
 </body>
+
+
+<script src="../js/product_management.js"></script>
+
 </html>
+
+

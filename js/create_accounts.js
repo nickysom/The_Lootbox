@@ -97,4 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
     fields.forEach((field) => field.classList.remove("error_border"));
     document.querySelectorAll(".error_message").forEach((el) => el.remove());
   }
+
+    // Clears the form when the page is refreshed 
+    window.onload = function () {
+      document.querySelector(".product-form").reset();
+    };
 });

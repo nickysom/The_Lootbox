@@ -504,3 +504,81 @@ Account Management
   border: 1px solid #ccc;
   font-size: 16px;
 }
+
+/*
+===============================================================
+Product Management Page
+===============================================================
+*/
+
+/* Product Management Main Container */
+.product_main {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Form Layout */
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Form Field Block */
+.product-form .form_field {
+  flex: 1;
+  min-width: 240px;
+}
+
+.product-form .form_field.full_width {
+  flex: 1 1 100%;
+}
+
+/* Form Inputs and Text area */
+.product-form input,
+.product-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  width: 100%;
+}
+
+.product-form textarea {
+  height: 200px;
+  padding: 16px 24px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  width: 100%;
+  resize: vertical;
+}
+
+/* Horizontal Button Group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.category_select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  width: 100%;
+  background-color: #ffffff;
+  color: #3b3b3b;
+}
+
+.download_button {
+  margin-top: 20px;
+}
