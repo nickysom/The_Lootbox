@@ -560,7 +560,7 @@ Product Management Page
   resize: vertical;
 }
 
-/* Horizontal Button Group */
+
 .button-group {
   display: flex;
   justify-content: space-between;
@@ -580,5 +580,49 @@ Product Management Page
 }
 
 .download_button {
-  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.search_field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search_input_group {
+  display: flex;
+  align-items: center;
+}
+
+.search_input_group input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  outline: none;
+}
+
+.search_button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-radius: 50px;
+  padding: 10px 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#update_divider .input_divider {
+  height: 2px;
+  width: 700px;
+  background-color: currentColor;
+  border: none;
 }
