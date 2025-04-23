@@ -1,5 +1,30 @@
 let JSONObject = {
-    product: []
+    product: [
+        {"id":"1","name":"Switch","description":"A Switch owned by Nintendo.","category":"Console","stock":"10","price":"$249.99", "serial":""},
+        {"id":"2","name":"Switch","description":"A Switch owned by Nintendo.","category":"Console","stock":"10","price":"$249.99", "serial":""},
+        {"id":"3","name":"Switch","description":"A Switch owned by Nintendo.","category":"Console","stock":"10","price":"$249.99", "serial":""},
+        {"id":"4","name":"Switch","description":"A Switch owned by Nintendo.","category":"Console","stock":"10","price":"$249.99", "serial":""},
+        
+        {"id":"5","name":"Mario Party","description":"A game by Nintendo.","category":"Game","stock":"10","price":"$70.00", "serial":""},
+        {"id":"6","name":"Mario Party","description":"A game by Nintendo.","category":"Game","stock":"10","price":"$70.00", "serial":""},
+        {"id":"7","name":"Mario Party","description":"A game by Nintendo.","category":"Game","stock":"10","price":"$70.00", "serial":""},
+        {"id":"8","name":"Mario Party","description":"A game by Nintendo.","category":"Game","stock":"10","price":"$70.00", "serial":""},
+
+        {"id":"9","name":"Remote","description":"A regular remote.","category":"Accessories","stock":"10","price":"$60.00", "serial":""},
+        {"id":"10","name":"Remote","description":"A regular remote.","category":"Accessories","stock":"10","price":"$60.00", "serial":""},
+        {"id":"11","name":"Remote","description":"A regular remote.","category":"Accessories","stock":"10","price":"$60.00", "serial":""},
+        {"id":"12","name":"Remote","description":"A regular remote.","category":"Accessories","stock":"10","price":"$60.00", "serial":""},
+
+        {"id":"13","name":"Pikachu","description":"A pokemon trading card.","category":"Trading Card","stock":"10","price":"$5.38", "serial":""},
+        {"id":"14","name":"Pikachu","description":"A pokemon trading card.","category":"Trading Card","stock":"10","price":"$5.38", "serial":""},
+        {"id":"15","name":"Pikachu","description":"A pokemon trading card.","category":"Trading Card","stock":"10","price":"$5.38", "serial":""},
+        {"id":"16","name":"Pikachu","description":"A pokemon trading card.","category":"Trading Card","stock":"10","price":"$5.38", "serial":""},
+
+        {"id":"17","name":"Random Item","description":"A rare collector's item.","category":"Collector's Item","stock":"10","price":"$1985.38", "serial":""},
+        {"id":"18","name":"Random Item","description":"A rare collector's item.","category":"Collector's Item","stock":"10","price":"$1985.38", "serial":""},
+        {"id":"19","name":"Random Item","description":"A rare collector's item.","category":"Collector's Item","stock":"10","price":"$1985.38", "serial":""},
+        {"id":"20","name":"Random Item","description":"A rare collector's item.","category":"Collector's Item","stock":"10","price":"$1985.38", "serial":""},
+    ]
   };
   
   // Save to local storage
