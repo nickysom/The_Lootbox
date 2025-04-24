@@ -2,9 +2,64 @@ let JSONObject = {
   product: [],
 };
 
+//A test product 
+JSONObject.product.push({
+  id: "0000000",
+  name: "Test Product",
+  description: "This is a default test product",
+  category: "misc",
+  stock: "0",
+  price: "$0.00",
+  manufacturer: "N/A",
+  weight: "0"
+});
+
+
 // Save data
 function saveToLocal() {
   localStorage.setItem("products", JSON.stringify(JSONObject.product));
+}
+
+function resetAllProductForms() {
+  // Clear create form
+  const createForm = document.querySelector("#new_product .product-form");
+  if (createForm) createForm.reset();
+
+  // Clear update form
+  const updateForm = document.querySelector("#update_fields .product-form");
+  if (updateForm) {
+    updateForm.reset();
+    [
+      "update_product_id",
+      "update_product_name",
+      "update_serial_number",
+      "update_description",
+      "update_category",
+      "update_stock",
+      "update_price",
+      "update_manufacturer",
+      "update_weight"
+    ].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.disabled = false;
+    });
+  }
+
+  // Clear delete form
+  const deleteForm = document.querySelector("#delete_fields .product-form");
+  if (deleteForm) deleteForm.reset();
+
+  // Clear search fields
+  const searchUpdate = document.getElementById("search_product");
+  const searchDelete = document.getElementById("search_delete_input");
+  if (searchUpdate) searchUpdate.value = "";
+  if (searchDelete) searchDelete.value = "";
+
+  // Hide update and delete results
+  document.getElementById("update_fields").style.display = "none";
+  document.getElementById("update_button_container").style.display = "none";
+  document.getElementById("update_divider").style.display = "none";
+  document.getElementById("delete_fields").style.display = "none";
 }
 
 // Load data
@@ -193,11 +248,40 @@ function searchProduct() {
   document.getElementById("update_manufacturer").value =
     match.manufacturer || "";
   document.getElementById("update_weight").value = match.weight || "";
+
+// Lock test object
+const updateFields = [
+  "update_product_id",
+  "update_product_name",
+  "update_serial_number",
+  "update_description",
+  "update_category",
+  "update_stock",
+  "update_price",
+  "update_manufacturer",
+  "update_weight"
+];
+
+if (match.id === "0000000") {
+  updateFields.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.disabled = true;
+  });
+} else {
+  updateFields.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.disabled = false;
+  });
+}
 }
 
 // Save updates
 function handleUpdate() {
   const id = document.getElementById("update_product_id").value.trim();
+  if (id === "0000000") {
+    alert("You do not have permission to edit the test product.");
+    return;
+  }
   const name = document.getElementById("update_product_name").value.trim();
   const serial = document.getElementById("update_serial_number").value.trim();
   const description = document
@@ -270,6 +354,7 @@ function handleUpdate() {
   alert(`Product ${id} updated.`);
 }
 
+
 // Search for deletion
 function searchProductToDelete() {
   const input = document
@@ -322,6 +407,11 @@ function searchProductToDelete() {
 // Confirm and delete product
 function handleDelete() {
   const id = document.getElementById("delete_product_id").value.trim();
+  if (id === "0000000") {
+    alert("You do not have permission to delete the test product.");
+    return;
+  }
+  
   const serial = document.getElementById("delete_serial_number").value.trim();
 
   if (!id) {

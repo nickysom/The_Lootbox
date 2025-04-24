@@ -47,27 +47,59 @@
     </div>
   </nav>
 
+
   <main class="product_main">
-    <button class="input_button download_button" onclick="downloadJSON()">Download Full Product List (JSON Format)</button>
+    <!-- Product List Download Button -->
+    <button class="input_button download_button" onclick="downloadJSON()">Download Full Product List (JSON
+      Format)</button>
+
+    <!-- Product Manage Tabs -->
     <div class="button-group">
-      <button class="input_button" onclick="showSection('new')">Create New Product</button>
-      <button class="input_button" onclick="showSection('update')">Update Current Product</button>
-      <button class="input_button" onclick="showSection('delete')">Delete a Product</button>
+      <button class="input_button" onclick="resetAllProductForms(); showSection('new')">
+        Create New Product
+      </button>
+
+      <button class="input_button" onclick="resetAllProductForms(); showSection('update')">
+        Update Current Product
+      </button>
+
+      <button class="input_button" onclick="resetAllProductForms(); showSection('delete')">
+        Delete a Product
+      </button>
+
     </div>
 
-    <!-- New Product Section -->
+    <!-- Horizontal Divider -->
     <div id="update_divider">
       <hr class="input_divider">
     </div>
+
+    <!-- Section for adding a new product -->
     <div id="new_product" class="form_section">
+      <!-- Prevent form from submitting and refreshing the page -->
       <form class="product-form" onsubmit="return false">
-        <div class="form_field"><label>Product ID</label><input type="text" id="product_id" placeholder="Product ID"
-            required></div>
-        <div class="form_field"><label>Product Name</label><input type="text" id="product_name"
-            placeholder="Product Name" required></div>
-        <div class="form_field"><label>Serial Number (Optional)</label><input type="text" id="serial_number"
-            placeholder="Serial Number"></div>
-        <div class="form_field"><label>Category</label>
+
+        <!-- Input for product ID -->
+        <div class="form_field">
+          <label>Product ID</label>
+          <input type="text" id="product_id" placeholder="Product ID" required>
+        </div>
+
+        <!-- Input for product name -->
+        <div class="form_field">
+          <label>Product Name</label>
+          <input type="text" id="product_name" placeholder="Product Name" required>
+        </div>
+
+        <!-- Optional input for serial number -->
+        <div class="form_field">
+          <label>Serial Number (Optional)</label>
+          <input type="text" id="serial_number" placeholder="Serial Number">
+        </div>
+
+        <!-- Dropdown to select product category -->
+        <div class="form_field">
+          <label>Category</label>
           <select id="category" class="category_select" required>
             <option value="" disabled selected>Select a category</option>
             <option value="console">Console</option>
@@ -78,22 +110,48 @@
             <option value="misc">Misc</option>
           </select>
         </div>
-        <div class="form_field"><label>Manufacturer</label><input type="text" id="manufacturer"
-            placeholder="Manufacturer" required></div>
-        <div class="form_field"><label>Stock Count</label><input type="number" id="stock" placeholder="Quantity"
-            required></div>
-        <div class="form_field"><label>Price</label><input type="text" id="price" placeholder="Price (USD)" required>
+
+        <!-- Input for product manufacturer -->
+        <div class="form_field">
+          <label>Manufacturer</label>
+          <input type="text" id="manufacturer" placeholder="Manufacturer" required>
         </div>
-        <div class="form_field"><label>Weight</label><input type="text" id="weight" placeholder="Weight (lbs)" required>
+
+        <!-- Input for how many items in stock -->
+        <div class="form_field">
+          <label>Stock Count</label>
+          <input type="number" id="stock" placeholder="Quantity" required>
         </div>
-        <div class="form_field full_width"><label>Product Description</label><textarea id="description"
-            placeholder="Product Description" required></textarea></div>
+
+        <!-- Input for product price -->
+        <div class="form_field">
+          <label>Price</label>
+          <input type="text" id="price" placeholder="Price (USD)" required>
+        </div>
+
+        <!-- Input for product weight -->
+        <div class="form_field">
+          <label>Weight</label>
+          <input type="text" id="weight" placeholder="Weight (lbs)" required>
+        </div>
+
+        <!-- Textarea for product description -->
+        <div class="form_field full_width">
+          <label>Product Description</label>
+          <textarea id="description" placeholder="Product Description" required></textarea>
+        </div>
+
+        <!-- Button to submit the form -->
         <button type="submit" class="input_button submit_button">Submit Product</button>
       </form>
     </div>
 
+
+
     <!-- Update Product Section -->
     <div id="update_product" class="form_section" style="display: none">
+
+      <!-- Search field for finding a product to update -->
       <div class="form_field search_field">
         <label>Search Product to Update</label>
         <div class="search_input_group">
@@ -102,17 +160,24 @@
         </div>
       </div>
 
+      <!-- Divider shown only when a product is found -->
       <div id="update_divider" style="display: none">
         <hr class="input_divider">
       </div>
 
+      <!-- Form for editing a product's details -->
       <div id="update_fields" style="display: none">
         <form class="product-form" onsubmit="return false">
+
+          <!-- Product fields populated after search -->
           <div class="form_field"><label>Product ID</label><input type="text" id="update_product_id" required></div>
           <div class="form_field"><label>Product Name</label><input type="text" id="update_product_name" required></div>
           <div class="form_field"><label>Serial Number (Optional)</label><input type="text" id="update_serial_number">
           </div>
-          <div class="form_field"><label>Category</label>
+
+          <!-- Category selector -->
+          <div class="form_field">
+            <label>Category</label>
             <select id="update_category" class="category_select" required>
               <option value="" disabled selected>Select a category</option>
               <option value="console">Console</option>
@@ -123,13 +188,16 @@
               <option value="misc">Misc</option>
             </select>
           </div>
+
           <div class="form_field"><label>Manufacturer</label><input type="text" id="update_manufacturer" required></div>
           <div class="form_field"><label>Stock Count</label><input type="number" id="update_stock" required></div>
           <div class="form_field"><label>Price</label><input type="text" id="update_price" required></div>
           <div class="form_field"><label>Weight</label><input type="text" id="update_weight" required></div>
-          <div class="form_field full_width"><label>Product Description</label><textarea id="update_description"
-              required></textarea></div>
+          <div class="form_field full_width"><label>Product Description</label>
+            <textarea id="update_description" required></textarea>
+          </div>
 
+          <!-- Submit button shown only after product is found -->
           <div id="update_button_container" style="display: none">
             <button class="input_button submit_button" onclick="handleUpdate()">Update Product</button>
           </div>
@@ -138,8 +206,12 @@
       </div>
     </div>
 
+
+
     <!-- Delete Product Section -->
     <div id="delete_product" class="form_section" style="display: none">
+
+      <!-- Search field for finding a product to delete -->
       <div class="form_field search_field">
         <label>Search Product to Delete</label>
         <div class="search_input_group">
@@ -148,12 +220,16 @@
         </div>
       </div>
 
+      <!-- Divider shown when a product is found -->
       <div id="update_divider" style="display: none">
         <hr class="input_divider">
       </div>
 
+      <!-- Read-only product info, shown if a match is found -->
       <div id="delete_fields" style="display: none">
         <form class="product-form" onsubmit="return false">
+
+          <!-- All fields are read-only to prevent editing -->
           <div class="form_field"><label>Product ID</label><input type="text" id="delete_product_id" readonly></div>
           <div class="form_field"><label>Product Name</label><input type="text" id="delete_product_name" readonly></div>
           <div class="form_field"><label>Serial Number</label><input type="text" id="delete_serial_number" readonly>
@@ -163,12 +239,16 @@
           <div class="form_field"><label>Stock Count</label><input type="text" id="delete_stock" readonly></div>
           <div class="form_field"><label>Price</label><input type="text" id="delete_price" readonly></div>
           <div class="form_field"><label>Weight</label><input type="text" id="delete_weight" readonly></div>
-          <div class="form_field full_width"><label>Description</label><textarea id="delete_description"
-              readonly></textarea></div>
+          <div class="form_field full_width">
+            <label>Description</label><textarea id="delete_description" readonly></textarea>
+          </div>
+
+          <!-- Button to confirm deletion -->
           <button class="input_button submit_button" onclick="handleDelete()">Delete Product</button>
         </form>
       </div>
     </div>
+</main>
 
 
     <script>
@@ -202,9 +282,15 @@
       }
     </script>
 
+  <script>
+    function showSection(section) {
+      const sections = ['new', 'update', 'delete'];
+      sections.forEach(s => {
+        document.getElementById(`${s}_product`).style.display = (s === section) ? 'block' : 'none';
+      });
+    }
+  </script>
+  <script src="../js/product_management.js"></script>
 </body>
-
-
-<script src="../js/product_management.js"></script>
 
 </html>
