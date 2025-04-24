@@ -2,7 +2,7 @@ let JSONObject = {
   product: [],
 };
 
-//A test product 
+//Test product that cannot be removed to ensure functionality.
 JSONObject.product.push({
   id: "0000000",
   name: "Test Product",
@@ -14,12 +14,12 @@ JSONObject.product.push({
   weight: "0"
 });
 
-
-// Save data
+// Saves data locally to be accessed more easily.
 function saveToLocal() {
   localStorage.setItem("products", JSON.stringify(JSONObject.product));
 }
 
+//Reset form inputs for a clean look.
 function resetAllProductForms() {
   // Clear create form
   const createForm = document.querySelector("#new_product .product-form");
@@ -62,7 +62,7 @@ function resetAllProductForms() {
   document.getElementById("delete_fields").style.display = "none";
 }
 
-// Load data
+// Loads the local data saved in saveToLocal function.
 function loadFromLocal() {
   const saved = localStorage.getItem("products");
   if (saved) {
@@ -70,7 +70,7 @@ function loadFromLocal() {
   }
 }
 
-// Add new product after validation
+// Add new product after validation.
 function addProduct(
   id,
   name,
@@ -110,7 +110,7 @@ function addProduct(
   alert(`${name} has been added with ID: ${id}`);
 }
 
-// Submit add form
+// Validation and submits addProduct function.
 function handleAdd() {
   const id = document.getElementById("product_id").value.trim();
   const name = document.getElementById("product_name").value.trim();
@@ -161,7 +161,7 @@ function handleAdd() {
   );
 }
 
-// Load data and reset forms
+// Load data and reset forms.
 window.onload = function () {
   loadFromLocal();
 
@@ -182,7 +182,7 @@ window.onload = function () {
     });
   }
 
-  // Auto-add $ prefix
+  // Auto-add $ prefix.
   ["price", "update_price"].forEach((id) => {
     const field = document.getElementById(id);
     if (field) {
@@ -196,7 +196,7 @@ window.onload = function () {
   });
 };
 
-// Export data
+// Export data to downloadable file.
 function downloadJSON() {
   const dataStr = JSON.stringify(JSONObject.product, null, 2);
   const blob = new Blob([dataStr], { type: "application/json" });
@@ -210,7 +210,7 @@ function downloadJSON() {
   URL.revokeObjectURL(url);
 }
 
-// Search product for update
+// Search product for update.
 function searchProduct() {
   document.getElementById("update_product").style.display = "block";
 
@@ -249,7 +249,7 @@ function searchProduct() {
     match.manufacturer || "";
   document.getElementById("update_weight").value = match.weight || "";
 
-// Lock test object
+// Lock test object.
 const updateFields = [
   "update_product_id",
   "update_product_name",
@@ -275,7 +275,7 @@ if (match.id === "0000000") {
 }
 }
 
-// Save updates
+// Save updates.
 function handleUpdate() {
   const id = document.getElementById("update_product_id").value.trim();
   if (id === "0000000") {
@@ -355,7 +355,7 @@ function handleUpdate() {
 }
 
 
-// Search for deletion
+// Search for deletion.
 function searchProductToDelete() {
   const input = document
     .getElementById("search_delete_input")
@@ -404,7 +404,7 @@ function searchProductToDelete() {
   });
 }
 
-// Confirm and delete product
+// Confirm and delete product.
 function handleDelete() {
   const id = document.getElementById("delete_product_id").value.trim();
   if (id === "0000000") {
