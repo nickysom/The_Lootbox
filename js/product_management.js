@@ -12,7 +12,208 @@ JSONObject.product.push({
   price: "$0.00",
   manufacturer: "N/A",
   weight: "0"
-});
+},
+{
+  id: "0000001”,
+  name: “Split Console",
+  description: “This console plays sports.”,
+  category: “Console”,
+  stock: “5”,
+  price: "$259.99”,
+  manufacturer: "N/A",
+  weight: “8”
+},
+{
+  id: "0000002”,
+  name: “Round Console”,
+  description: “This console can roll.”,
+  category: “Console”,
+  stock: “5”,
+  price: "$159.99”,
+  manufacturer: "N/A",
+  weight: “5”
+},
+{
+  id: "0000003”,
+  name: “Upside Down Console”,
+  description: “This console randomly flips upside down. (Can break easily)”,
+  category: “Console”,
+  stock: “5”,
+  price: "$549.99”,
+  manufacturer: "N/A",
+  weight: “15”
+},
+{
+  id: "0000004”,
+  name: “Floating Console”,
+  description: “This console can float through the power of magnetism.”,
+  category: “Console”,
+  stock: “2”,
+  price: "$839.98”,
+  manufacturer: "N/A",
+  weight: “12”
+},
+{
+  id: "0000005”,
+  name: “Football”,
+  description: “A great console game.”,
+  category: “Game”,
+  stock: “200”,
+  price: "$80.00”,
+  manufacturer: "N/A",
+  weight: “2”
+},
+{
+  id: "0000006”,
+  name: “Running”,
+  description: “A Floating Console only game that results in the console orbiting around you.”,
+  category: “Game”,
+  stock: “200”,
+  price: "$80.00”,
+  manufacturer: "N/A",
+  weight: “2”
+},
+{
+  id: "0000007”,
+  name: “Rotate”,
+  description: “A round console only game that results in the console rotating at high velocity into the nearest wall.”,
+  category: “Game”,
+  stock: “200”,
+  price: "$80.00”,
+  manufacturer: "N/A",
+  weight: “2”
+},
+{
+  id: "0000008”,
+  name: “Split”,
+  description: “A split console only game that enables any game to be two player.”,
+  category: “Game”,
+  stock: “200”,
+  price: "$80.00”,
+  manufacturer: "N/A",
+  weight: “2”
+},
+{
+  id: "0000009”,
+  name: “Universal Remote”,
+  description: “A wireless remote that works for any console.”,
+  category: “Accessories”,
+  stock: “100”,
+  price: "$60.00”,
+  manufacturer: "N/A",
+  weight: “3”
+},
+{
+  id: "0000010”,
+  name: “Do Nothing Remote”,
+  description: “A remote that has hundreds of buttons that have no function.”,
+  category: “Accessories”,
+  stock: “100”,
+  price: "$510.00”,
+  manufacturer: "N/A",
+  weight: “52”
+},
+{
+  id: "0000011”,
+  name: “Motion Tracker”,
+  description: “A motion tracking device to assist consoles in tracking the user for specific games.”,
+  category: “Accessories”,
+  stock: “50”,
+  price: "$100.00”,
+  manufacturer: "N/A",
+  weight: “1”
+},
+{
+  id: "0000012”,
+  name: “Sphere”,
+  description: “When played in conjunction with running on the floating console, will result in the console having a secondary orbit from this accessory. Resulting in a moon.”,
+  category: “Accessories”,
+  stock: “10”,
+  price: "$800.00”,
+  manufacturer: "N/A",
+  weight: “20”
+},
+{
+  id: "0000013”,
+  name: “Orbit?”,
+  description: “You have successfully created a representation of our planetary orbit by using 3 of our products in a specific way.”,
+  category: “Trading Card”,
+  stock: “10”,
+  price: "$200.00”,
+  manufacturer: "N/A",
+  weight: “1”
+},
+{
+  id: "0000014”,
+  name: “Just keep Spinning”,
+  description: “You have successfully made the round console start rotating. Good luck stopping it.”,
+  category: “Trading Card”,
+  stock: “10”,
+  price: "$200.00”,
+  manufacturer: "N/A",
+  weight: “1”
+},
+{
+  id: "0000015”,
+  name: “You broke your console.”,
+  description: “The most common trading card. These consoles are very fragile.”,
+  category: “Trading Card”,
+  stock: “100”,
+  price: "$10.00”,
+  manufacturer: "N/A",
+  weight: “1”
+},
+{
+  id: "0000016”,
+  name: “How?!”,
+  description: “You somehow got your console to play football. Congrats?”,
+  category: “Trading Card”,
+  stock: “10”,
+  price: "$200.00”,
+  manufacturer: "N/A",
+  weight: “1”
+},
+{
+  id: "0000017”,
+  name: “Meteorite”,
+  description: “One of a kind accessory that can be using in conjunction with the floating console, running, and sphere. This results in an asteroid belt forming. Can get in the way of the users’ line of sight.”,
+  category: “Collector’s Item”,
+  stock: “1”,
+  price: "$8000.00”,
+  manufacturer: "N/A",
+  weight: “500”
+},
+{
+  id: "0000018”,
+  name: “Do Something Remote”,
+  description: “A remote that does something. Nobody knows what though.”,
+  category: “Collector’s Item”,
+  stock: “1”,
+  price: "$5000.00”,
+  manufacturer: "N/A",
+  weight: “5”
+},
+{
+  id: "0000019”,
+  name: “Stop”,
+  description: “A one of a kind item that can stop the round console once it has begun rotating.”,
+  category: “Collector’s Item”,
+  stock: “1”,
+  price: "$3000.00”,
+  manufacturer: "N/A",
+  weight: “7”
+},
+{
+  id: "0000020”,
+  name: “Fix”,
+  description: “Turns the console into a normal console. Nobody has bought this yet.”,
+  category: “Collector’s Item”,
+  stock: “1”,
+  price: "$5.00”,
+  manufacturer: "N/A",
+  weight: “10”
+}
+);
 
 // Saves data locally to be accessed more easily.
 function saveToLocal() {
