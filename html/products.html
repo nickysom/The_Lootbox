@@ -5,82 +5,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The LootBox: Products</title>
+
+    <!-- Custom site styles -->
     <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap-4.4.1.css" />
+
+    <!-- Product logic -->
     <script src="../js/product_management.js"></script>
     <script src="../js/products.js" defer></script>
 </head>
 
 <body>
-    <!-- Navbar: Main site navigation -->
-    <nav class="nav-colors">
-        <div class="d-flex flex-wrap justify-content-between align-items-center container-fluid">
+    <div class="page_wrapper">
+        <!-- Navbar: Main site navigation -->
+        <nav class="nav-colors">
+            <div class="d-flex flex-wrap justify-content-between align-items-center container-fluid">
+                <!-- Logo and brand title -->
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../images/the_lootbox_icon.png" alt="Lootbox Icon" class="store_icon">
+                    <span class="divider me-3 mx-3"></span>
+                    <h1 class="store_title mb-0">The Loot Box</h1>
+                </div>
 
-            <!-- Logo and brand title -->
-            <div class="d-flex align-items-center gap-3">
-                <img src="../images/the_lootbox_icon.png" alt="Lootbox Icon" class="store_icon">
-                <span class="divider me-3 mx-3"></span>
-                <h1 class="store_title mb-0">The Loot Box</h1>
+                <!-- Navigation links and utilities -->
+                <div class="d-flex flex-wrap align-items-center">
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="products.html">Products</a>
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="product_management.html">Product Editor</a>
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="shopper_management.html">Profile Manager</a>
+                    <a href="login.html">
+                        <img src="../images/profile_icon.png" alt="Profile Icon Login" class="profile_icon mx-2">
+                    </a>
+                    <a href="shop_cart.html" class="shopping_cart_wrapper">
+                        <img src="../images/shopping_cart.png" alt="Cart Icon" class="shopping_cart_icon mx-2">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page content -->
+        <div class="productsPage">
+            <!-- Sidebar filters -->
+            <div class="productsSidebarContainer" id="filterSidebar">
+                <div class="productsSidebarHeader">
+                    <span>Filter</span>
+                </div>
+                <form class="filterForm" onsubmit="event.preventDefault(); applyFilters();">
+                    <label><input type="checkbox" name="category" value="console" /> Console</label>
+                    <label><input type="checkbox" name="category" value="game" /> Game</label>
+                    <label><input type="checkbox" name="category" value="accessories" /> Accessories</label>
+                    <label><input type="checkbox" name="category" value="tradingcard" /> Trading Cards</label>
+                    <label><input type="checkbox" name="category" value="collectorsitem" /> Collectibles</label>
+                    <label><input type="checkbox" name="category" value="misc" /> Misc</label>
+                    <button type="submit">Apply</button>
+                    <button type="button" onclick="resetView()">Reset</button>
+                </form>
             </div>
 
-            <!-- Navigation links and utils -->
-            <div class="d-flex flex-wrap align-items-center">
+            <!-- Main area -->
+            <div style="flex: 1">
+                <!-- Search bar -->
+                <div class="productSearchBar" style="padding: 1rem;">
+                    <input type="text" id="searchInputTop" placeholder="Search by name or product ID..."
+                        oninput="applyFilters()" style="width: 100%; padding: 0.5rem; font-size: 1rem;" />
+                </div>
 
-                <!-- Page links -->
-                <a class="button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
-                <a class="button rounded-pill px-4 py-2 mx-2" href="products.html">Products</a>
-                <a class="button rounded-pill px-4 py-2 mx-2" href="product_management.html">Product Editor</a>
-                <a class="button rounded-pill px-4 py-2 mx-2" href="shopper_management.html">Profile Manager</a>
-
-                <!-- Account and cart icons -->
-                <a href="login.html">
-                    <img src="../images/profile_icon.png" alt="Profile Icon Login" class="profile_icon mx-2">
-                </a>
-                <a href="#" class="shopping_cart_wrapper">
-                    <img src="../images/shopping_cart.png" alt="Cart Icon" class="shopping_cart_icon mx-2">
-                </a>
-
-            </div>
-        </div>
-    </nav>
-
-    <!-- PAGE CONTENT -->
-    <div class="productsPage">
-        <!-- SIDEBAR FILTERS -->
-        <div class="productsSidebarContainer" id="filterSidebar">
-            <div class="productsSidebarHeader">
-                <span>Filter</span>
-            </div>
-            <form class="filterForm" onsubmit="event.preventDefault(); applyFilters();">
-                <label><input type="checkbox" name="category" value="console" /> Console</label>
-                <label><input type="checkbox" name="category" value="game" /> Game</label>
-                <label><input type="checkbox" name="category" value="accessories" /> Accessories</label>
-                <label><input type="checkbox" name="category" value="tradingcard" /> Trading Cards</label>
-                <label><input type="checkbox" name="category" value="collectorsitem" /> Collectibles</label>
-                <label><input type="checkbox" name="category" value="misc" /> Misc</label>
-                <button type="submit">Apply</button>
-                <button type="button" onclick="resetView()">Reset</button>
-            </form>
-        </div>
-
-        <!-- MAIN AREA -->
-        <div style="flex: 1">
-            <!-- SEARCH BAR -->
-            <div class="productSearchBar" style="padding: 1rem;">
-                <input type="text" id="searchInputTop" placeholder="Search by name or product ID..."
-                    oninput="applyFilters()" style="width: 100%; padding: 0.5rem; font-size: 1rem;" />
-            </div>
-
-            <!-- PRODUCT GRID -->
-            <div class="productsGrid" id="productList">
-                <!-- Products will be loaded here by products.js. DO NOT MANUALLY WRITE PRODUCTS INTO PRODUCT.HTML -->
+                <!-- Product grid -->
+                <div class="productsGrid" id="productList">
+                    <!-- Products will be loaded here by products_management.js. Do not manually write products into product.html -->
+                </div>
             </div>
         </div>
+
+        <!-- Product detail view -->
+        <div id="productDetailView" style="display: none;"></div>
+
+        <!-- Footer -->
+        <footer class="footer_bar">
+            <h5>Contact Us</h5>
+            <p>Email: support@lootboxstore.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>&copy; 2025 The Loot Box. All rights reserved.</p>
+        </footer>
     </div>
-
-    <!-- PRODUCT DETAIL VIEW -->
-    <div id="productDetailView" style="display: none;"></div>
-
 </body>
 
 </html>

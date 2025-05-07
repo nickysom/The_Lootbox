@@ -4,100 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser Tab Title -->
     <title>The LootBox: Account Management</title>
+
+    <!-- Custom Site Styles -->
     <link rel="stylesheet" href="../css/styles.css">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS (v4.4.1) -->
     <link rel="stylesheet" href="../css/bootstrap-4.4.1.css">
+
+    <!-- JavaScript for form validation -->
     <script src="../js/shopper_manage.js"></script>
 </head>
 
-
 <body>
-    <!-- Navbar: Main site navigation -->
-    <nav class="nav-colors">
-        <div class="d-flex flex-wrap justify-content-between align-items-center container-fluid">
-
-            <!-- Logo and brand title -->
-            <div class="d-flex align-items-center gap-3">
-                <img src="../images/the_lootbox_icon.png" alt="Lootbox Icon" class="store_icon">
-                <span class="divider me-3 mx-3"></span>
-                <h1 class="store_title mb-0">The Loot Box</h1>
-            </div>
-
-            <!-- Navigation links and utils -->
-            <div class="d-flex flex-wrap align-items-center">
-
-                <!-- Page links -->
-                <a class="button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
-                <a class="button rounded-pill px-4 py-2 mx-2" href="products.html">Products</a>
-                <a class="button rounded-pill px-4 py-2 mx-2" href="product_management.html">Product Editor</a>
-                <a class="button rounded-pill px-4 py-2 mx-2" href="shopper_management.html">Profile Manager</a>
-
-                <!-- Account and cart icons -->
-                <a href="login.html">
-                    <img src="../images/profile_icon.png" alt="Profile Icon Login" class="profile_icon mx-2">
-                </a>
-                <a href="#" class="shopping_cart_wrapper">
-                    <img src="../images/shopping_cart.png" alt="Cart Icon" class="shopping_cart_icon mx-2">
-                </a>
-
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="login_center account_center">
-        <div class="account_card">
-            <h2 class="text-center mb-4">Manage Your Information</h2>
-            <form id="shopper_management" novalidate onsubmit="return validateMakeObject(
-                    document.getElementById('email').value,
-                    document.getElementById('first_name').value,
-                    document.getElementById('last_name').value,
-                    document.getElementById('phone').value,
-                    document.getElementById('age').value,
-                    document.getElementById('address').value
-                )">
-                <div class="account_grid">
-                    <div class="account_field full_width">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="account_field">
-                        <label for="first_name">First Name:</label>
-                        <input type="text" id="first_name" name="first_name" required>
-                    </div>
-
-                    <div class="account_field">
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" id="last_name" name="last_name" required>
-                    </div>
-
-                    <div class="account_field">
-                        <label for="phone">Phone Number:</label>
-                        <input type="text" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="account_field">
-                        <label for="age">Shopper Age:</label>
-                        <input type="text" id="age" name="age" required>
-                    </div>
-
-                    <div class="account_field full_width">
-                        <label for="address">Address:</label>
-                        <input type="text" id="address" placeholder="Street, City, State, and Zipcode" name="address"
-                            required>
-                    </div>
+    <div class="page_wrapper">
+        <!-- Navbar -->
+        <nav class="nav-colors">
+            <div class="d-flex flex-wrap justify-content-between align-items-center container-fluid">
+                <!-- Logo and Title -->
+                <div class="d-flex align-items-center gap-3">
+                    <img src="../images/the_lootbox_icon.png" alt="Lootbox Icon" class="store_icon">
+                    <span class="divider me-3 mx-3"></span>
+                    <h1 class="store_title mb-0">The Loot Box</h1>
                 </div>
 
-                <hr class="input_divider">
+                <!-- Navigation Links -->
+                <div class="d-flex flex-wrap align-items-center">
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="products.html">Products</a>
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="product_management.html">Product Editor</a>
+                    <a class="button rounded-pill px-4 py-2 mx-2" href="shopper_management.html">Profile Manager</a>
 
-                <button type="submit" class="input_button">Update Information</button>
-            </form>
+                    <!-- Icons -->
+                    <a href="login.html">
+                        <img src="../images/profile_icon.png" alt="Profile Icon Login" class="profile_icon mx-2">
+                    </a>
+                    <a href="shop_cart.html" class="shopping_cart_wrapper">
+                        <img src="../images/shopping_cart.png" alt="Cart Icon" class="shopping_cart_icon mx-2">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Account Management Form -->
+        <div class="login_center account_center">
+            <div class="account_card">
+                <h2 class="text-center mb-4">Manage Your Information</h2>
+                <form id="shopper_management" novalidate onsubmit="return validateMakeObject(
+          document.getElementById('email').value,
+          document.getElementById('first_name').value,
+          document.getElementById('last_name').value,
+          document.getElementById('phone').value,
+          document.getElementById('age').value,
+          document.getElementById('address').value
+        )">
+                    <div class="account_grid">
+                        <div class="account_field full_width">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="account_field">
+                            <label for="first_name">First Name:</label>
+                            <input type="text" id="first_name" name="first_name" required>
+                        </div>
+
+                        <div class="account_field">
+                            <label for="last_name">Last Name:</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
+
+                        <div class="account_field">
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="account_field">
+                            <label for="age">Shopper Age:</label>
+                            <input type="text" id="age" name="age" required>
+                        </div>
+
+                        <div class="account_field full_width">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" placeholder="Street, City, State, and Zipcode"
+                                name="address" required>
+                        </div>
+                    </div>
+
+                    <hr class="input_divider">
+
+                    <button type="submit" class="input_button">Update Information</button>
+                </form>
+            </div>
         </div>
-    </div>
 
+        <!-- Footer -->
+        <footer class="footer_bar">
+            <h5>Contact Us</h5>
+            <p>Email: support@lootboxstore.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>&copy; 2025 The Loot Box. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 
 </html>

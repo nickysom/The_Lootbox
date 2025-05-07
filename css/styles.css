@@ -21,6 +21,16 @@ body {
   flex: 1;
 }
 
+.page_wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 /*
 ===============================================================
 Navbar and Banner Section
@@ -460,6 +470,7 @@ Footer
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: auto;
 }
 
 .footer_bar h5 {
@@ -863,4 +874,34 @@ Products Page
 
 .hidden {
   display: none;
+}
+
+/*
+===============================================================
+Shopping Cart Page
+===============================================================
+*/
+
+.message_box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+}
+
+.message_box h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.message_box p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
