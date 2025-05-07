@@ -26,7 +26,7 @@ JSONObject.product.push(
     price: "$129.99",
     manufacturer: "Nintendo",
     weight: "5",
-    image: "images/placeholder.png",
+    image: "images/nes.jpg",
   },
   {
     id: "1000002",
