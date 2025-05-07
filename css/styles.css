@@ -53,12 +53,14 @@ Navbar and Banner Section
 
 /* navbar background gradient */
 .nav-colors {
-  background: linear-gradient(to right,
-      #4c00a4 0%,
-      #8300c4 25%,
-      #4c00a4 50%,
-      #8300c4 75%,
-      #4c00a4 100%);
+  background: linear-gradient(
+    to right,
+    #4c00a4 0%,
+    #8300c4 25%,
+    #4c00a4 50%,
+    #8300c4 75%,
+    #4c00a4 100%
+  );
   border-bottom: 3px solid #000000;
   padding: 12px 14px !important;
   display: flex;
@@ -230,7 +232,6 @@ Login Page – Layout & Centering
   padding: 40px 0;
 }
 
-
 .account_center {
   padding-top: 30px;
 }
@@ -357,7 +358,6 @@ Create Accounts Page – Styling
   font-size: 16px;
 }
 
-
 /*
 ===============================================================
 Index Home Page - Card Categories
@@ -444,12 +444,14 @@ Footer
 */
 
 .footer_bar {
-  background: linear-gradient(to right,
-      #4c00a4 0%,
-      #8300c4 25%,
-      #4c00a4 50%,
-      #8300c4 75%,
-      #4c00a4 100%);
+  background: linear-gradient(
+    to right,
+    #4c00a4 0%,
+    #8300c4 25%,
+    #4c00a4 50%,
+    #8300c4 75%,
+    #4c00a4 100%
+  );
   color: white;
   text-align: center;
   padding: 10px 8px;
@@ -497,7 +499,6 @@ Account Management
   justify-content: center;
   align-items: center;
 }
-
 
 .account_grid {
   display: flex;
@@ -583,7 +584,6 @@ Product Management Page
   resize: vertical;
 }
 
-
 .button-group {
   display: flex;
   justify-content: space-between;
@@ -605,7 +605,6 @@ Product Management Page
 .download_button {
   margin-bottom: 20px;
 }
-
 
 .search_field {
   display: flex;
