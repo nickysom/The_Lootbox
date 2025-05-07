@@ -6,88 +6,69 @@
   <title>The Lootbox Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
-
-
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/bootstrap-4.4.1.css">
-
 </head>
 
 <body>
 
-  <!-- Navbar: Main site navigation -->
   <nav class="navbar navbar-expand-md nav-colors">
     <div class="container-fluid d-flex flex-wrap align-items-center justify-content-between">
-
-      <!-- Logo and brand title -->
       <div class="d-flex align-items-center gap-3">
         <img src="images/the_lootbox_icon.png" alt="Lootbox Icon" class="store_icon">
         <span class="divider me-3 mx-3"></span>
         <h1 class="store_title mb-0">The Loot Box</h1>
       </div>
 
-      <!-- Navigation links and utils -->
       <div class="d-flex flex-wrap align-items-center">
-
-        <!-- Page links -->
         <a class="button rounded-pill px-4 py-2 mx-2" href="index.html">Home</a>
+        <a class="button rounded-pill px-4 py-2 mx-2" href="html/products.html">Products</a>
         <a class="button rounded-pill px-4 py-2 mx-2" href="html/product_management.html">Product Editor</a>
+        <a class="button rounded-pill px-4 py-2 mx-2" href="html/shopper_management.html">Profile Manager</a>
 
-        <!-- Search bar -->
-        <form class="search_bar d-flex align-items-center mx-2">
-          <input type="search" placeholder="Search" id="search" name="search" class="search_input">
-          <button type="submit" class="power_btn">⏻</button>
-        </form>
-
-        <!-- Account and cart icons -->
         <a href="html/login.html">
           <img src="images/profile_icon.png" alt="Profile Icon Login" class="profile_icon mx-2">
         </a>
         <a href="#" class="shopping_cart_wrapper">
           <img src="images/shopping_cart.png" alt="Cart Icon" class="shopping_cart_icon mx-2">
         </a>
-
       </div>
     </div>
   </nav>
 
-
-
-  <!-- Main Content -->
   <main>
-    <div class="container-fluid content-section">
+    <div class="container content-section">
 
-      <!-- Product Category Cards (Smaller Version) -->
+      <!-- Category Cards -->
       <div class="card_container">
-        <a href="consoles.html" class="product_card">
+        <a href="HTML/products.html?category=console" class="product_card">
           <div class="product_image">
             <img src="images/console_icon.png" alt="Consoles">
           </div>
           <div class="product_label">Consoles</div>
         </a>
 
-        <a href="games.html" class="product_card">
+        <a href="HTML/products.html?category=game" class="product_card">
           <div class="product_image">
             <img src="images/game_cartridge.png" alt="Games">
           </div>
           <div class="product_label">Games</div>
         </a>
 
-        <a href="accessories.html" class="product_card">
+        <a href="HTML/products.html?category=accessories" class="product_card">
           <div class="product_image">
             <img src="images/gaming_headset.png" alt="Accessories">
           </div>
           <div class="product_label">Accessories</div>
         </a>
 
-        <a href="accessories.html" class="product_card">
+        <a href="HTML/products.html?category=tradingcard" class="product_card">
           <div class="product_image">
             <img src="images/trading.png" alt="Trading Cards">
           </div>
           <div class="product_label">Trading Cards</div>
         </a>
 
-        <a href="accessories.html" class="product_card">
+        <a href="HTML/products.html?category=collectorsitem" class="product_card">
           <div class="product_image">
             <img src="images/coins.png" alt="Collectors Items">
           </div>
@@ -95,26 +76,103 @@
         </a>
       </div>
 
+    </div>
 
-
-      <!-- About Us-->
-      <div class="row justify-content-around mb-5">
-        <div class="col-12 col-md-5 bg-light p-4 rounded-lg mb-4 mb-md-0">
-          <h2>About Us</h2>
-          <p>We are a dedicated retro gaming store bringing back the classics. Our mission is to connect people with the
-            best nostalgic games and consoles at the best prices.</p>
+    <!-- About Us and QA Section -->
+    <div class="custom_container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 col-md-6 p-3">
+          <div class="bg-light p-4 rounded text-center h-100 card_space">
+            <h2>About Us</h2>
+            <p>We are a dedicated retro gaming store bringing back the classics. Our mission is to connect people with
+              the best nostalgic games and consoles at the best prices.</p>
+          </div>
         </div>
-        <div class="col-12 col-md-5 bg-light p-4 rounded">
-          <h2>Quality Assurance</h2>
-          <p>All products go through detailed inspection and testing by our certified technicians. We guarantee only
-            fully functional, authentic products reach our customers.</p>
+        <div class="col-12 col-md-6 p-3">
+          <div class="bg-light p-4 rounded text-center h-100 card_space">
+            <h2>Quality Assurance</h2>
+            <p>All products go through detailed inspection and testing by our certified technicians. We guarantee only
+              fully functional, authentic products reach our customers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom_container">
+
+      <!-- Team -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 bg-light p-4 rounded">
+          <h2 class="text-center mb-4">Meet the Team</h2>
+          <p class="text-center mb-4">
+            We’re a team of students from <strong>Penn State York</strong> running our local retro game store from our
+            homes. We’re passionate about gaming, tech, and community.
+          </p>
+          <div class="d-flex justify-content-center">
+            <table class="team_table">
+              <tr>
+                <td>
+                  <h5>Nicky</h5>
+                  <p>Operations Manager</p>
+                </td>
+                <td>
+                  <h5>Howie</h5>
+                  <p>Product Manager</p>
+                </td>
+                <td>
+                  <h5>Brady</h5>
+                  <p>Quality Lead</p>
+                </td>
+                <td>
+                  <h5>David</h5>
+                  <p>Customer Experience</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Why Retro -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 bg-light p-4 rounded">
+          <h2 class="text-center mb-4">Why a Retro Game Store?</h2>
+          <p class="text-center">We grew up with controllers in our hands and pixelated adventures in our hearts. Retro
+            gaming isn’t just nostalgia — it’s a shared love that connected us, challenged us, and made us who we are.
+            Whether it's blowing into cartridges or mastering combos, we’re here to keep those memories alive.</p>
+        </div>
+      </div>
+
+      <!-- What Makes Us Different -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 bg-light p-4 rounded">
+          <h2 class="text-center mb-4">What Makes Us Different</h2>
+          <ul class="list-unstyled text-center">
+            <li>We test every game by actually playing them.</li>
+            <li>Orders are shipped from our homes — handled with care.</li>
+            <li>We can identify any console just by the startup sound.</li>
+            <li>No knockoffs. No junk. No shortcuts. Just the good stuff.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Community -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 bg-light p-4 rounded">
+          <h2 class="text-center mb-4">Community Shoutouts</h2>
+          <p class="text-center">Big thanks to everyone at Penn State York who encouraged us to make this real. Special
+            shoutouts to our friends who helped test controllers, click through bugs, and hype us up when we were just
+            sketching this idea on paper.</p>
+          <p class="text-center mt-3">If you made it this far, use code <strong>PIXEL10</strong> for 10% off your first
+            order — just for the real ones.</p>
         </div>
       </div>
 
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer_bar">
     <h5>Contact Us</h5>
     <p>Email: support@lootboxstore.com</p>
@@ -122,11 +180,10 @@
     <p>&copy; 2025 The Loot Box. All rights reserved.</p>
   </footer>
 
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap-4.4.1.js"></script>
+  <script src="js/products.js" defer></script>
 </body>
 
 </html>

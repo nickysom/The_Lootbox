@@ -28,13 +28,9 @@
 
         <!-- Page links -->
         <a class="button rounded-pill px-4 py-2 mx-2" href="../index.html">Home</a>
+        <a class="button rounded-pill px-4 py-2 mx-2" href="products.html">Products</a>
         <a class="button rounded-pill px-4 py-2 mx-2" href="product_management.html">Product Editor</a>
-
-        <!-- Search bar -->
-        <form class="search_bar d-flex align-items-center mx-2">
-          <input type="search" placeholder="Search" id="search" name="search" class="search_input">
-          <button type="button" class="power_btn" onclick="searchProduct()">⏻</button>
-        </form>
+        <a class="button rounded-pill px-4 py-2 mx-2" href="shopper_management.html">Profile Manager</a>
 
         <!-- Account and cart icons -->
         <a href="login.html">
@@ -249,39 +245,39 @@
         </form>
       </div>
     </div>
-</main>
+  </main>
 
 
-    <script>
-      function showSection(section) {
-        const sections = ['new', 'update', 'delete'];
-        sections.forEach(s => {
-          document.getElementById(`${s}_product`).style.display = (s === section) ? 'block' : 'none';
-        });
+  <script>
+    function showSection(section) {
+      const sections = ['new', 'update', 'delete'];
+      sections.forEach(s => {
+        document.getElementById(`${s}_product`).style.display = (s === section) ? 'block' : 'none';
+      });
+    }
+
+    function searchProduct() {
+      // Add your logic to fetch and populate update fields
+      alert('Search product logic goes here');
+    }
+
+    function loadProductForDelete() {
+      // Add logic to fill in the readonly fields
+      alert('Load delete product info logic goes here');
+    }
+
+    function confirmDelete() {
+      if (confirm("Are you sure you want to delete this product?")) {
+        // Add delete logic here
+        alert('Product deleted');
       }
+    }
 
-      function searchProduct() {
-        // Add your logic to fetch and populate update fields
-        alert('Search product logic goes here');
-      }
-
-      function loadProductForDelete() {
-        // Add logic to fill in the readonly fields
-        alert('Load delete product info logic goes here');
-      }
-
-      function confirmDelete() {
-        if (confirm("Are you sure you want to delete this product?")) {
-          // Add delete logic here
-          alert('Product deleted');
-        }
-      }
-
-      function downloadJSON() {
-        // Add your download logic here
-        alert('Download product JSON logic goes here');
-      }
-    </script>
+    function downloadJSON() {
+      // Add your download logic here
+      alert('Download product JSON logic goes here');
+    }
+  </script>
 
   <script>
     function showSection(section) {
@@ -291,7 +287,9 @@
       });
     }
   </script>
+
   <script src="../js/product_management.js"></script>
+
 </body>
 
 </html>

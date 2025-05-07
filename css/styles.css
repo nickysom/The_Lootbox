@@ -363,32 +363,32 @@ Create Accounts Page – Styling
 Index Home Page - Card Categories
 ===============================================================
 */
-
 .card_container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 35px;
   margin: 40px auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .product_card {
   background-color: #ffffff;
   width: 180px;
-  border-radius: 12px;
+  border-radius: 20px;
   text-align: center;
   text-decoration: none;
-  border: 5px solid #000000;
+  border: none;
+  box-shadow: 0 4px 12px rgba(, 0, 0, 0.1);
   color: #000000;
-  transition: transform 0.2s ease;
-  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product_card:hover {
-  transform: scale(1.03);
-  text-decoration: none;
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   color: #4c00a4;
+  text-decoration: none;
 }
 
 .product_image {
@@ -398,7 +398,8 @@ Index Home Page - Card Categories
   align-items: center;
   justify-content: center;
   background-color: #8300c4;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .product_image img {
@@ -408,10 +409,32 @@ Index Home Page - Card Categories
 }
 
 .product_label {
-  padding: 10px 0;
+  padding: 12px 0;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 16px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.custom_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.team_table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.team_table td {
+  padding: 20px 40px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
 }
 
 /*
@@ -636,5 +659,209 @@ Product Management Page
 #update_divider,
 #delete_divider,
 #update_button_container {
+  display: none;
+}
+
+/*
+===============================================================
+Products Page
+===============================================================
+*/
+
+.productsPage {
+  display: flex;
+  align-items: flex-start;
+}
+
+.productsSidebarContainer {
+  width: 220px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.productsSidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  background: #f9f9f9;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.filterCloseBtn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filterForm {
+  padding: 12px;
+}
+
+.filterForm label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.filterForm button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.filterForm button:hover {
+  background-color: #3b3b3b;
+}
+
+.filterToggleBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 999px;
+}
+
+#searchInputTop {
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  margin-top: 7px;
+  height: 55px;
+  padding: 20px 22px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 50px;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.productCard {
+  background: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.productCard img {
+  width: 100%;
+  height: auto;
+}
+
+.productName {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.productDesc {
+  font-size: 13px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.productCard .price {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+#productDetailView {
+  display: none;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.productDetailContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.productDetailImage img {
+  max-width: 350px;
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productDetailInfo {
+  max-width: 400px;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.productDetailInfo h2 {
+  margin-top: 0;
+}
+
+.productDetailInfo p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.productDetailInfo button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.productDetailInfo button:hover {
+  background-color: #3b3b3b;
+}
+
+.hidden {
   display: none;
 }

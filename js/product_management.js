@@ -2,217 +2,249 @@ let JSONObject = {
   product: [],
 };
 
-//Test product that cannot be removed to ensure functionality.
-JSONObject.product.push({
-  id: "0000000",
-  name: "Test Product",
-  description: "This is a default test product",
-  category: "misc",
-  stock: "0",
-  price: "$0.00",
-  manufacturer: "N/A",
-  weight: "0"
-},
-{
-  id: "0000001”,
-  name: “Split Console",
-  description: “This console plays sports.”,
-  category: “Console”,
-  stock: “5”,
-  price: "$259.99”,
-  manufacturer: "N/A",
-  weight: “8”
-},
-{
-  id: "0000002”,
-  name: “Round Console”,
-  description: “This console can roll.”,
-  category: “Console”,
-  stock: “5”,
-  price: "$159.99”,
-  manufacturer: "N/A",
-  weight: “5”
-},
-{
-  id: "0000003”,
-  name: “Upside Down Console”,
-  description: “This console randomly flips upside down. (Can break easily)”,
-  category: “Console”,
-  stock: “5”,
-  price: "$549.99”,
-  manufacturer: "N/A",
-  weight: “15”
-},
-{
-  id: "0000004”,
-  name: “Floating Console”,
-  description: “This console can float through the power of magnetism.”,
-  category: “Console”,
-  stock: “2”,
-  price: "$839.98”,
-  manufacturer: "N/A",
-  weight: “12”
-},
-{
-  id: "0000005”,
-  name: “Football”,
-  description: “A great console game.”,
-  category: “Game”,
-  stock: “200”,
-  price: "$80.00”,
-  manufacturer: "N/A",
-  weight: “2”
-},
-{
-  id: "0000006”,
-  name: “Running”,
-  description: “A Floating Console only game that results in the console orbiting around you.”,
-  category: “Game”,
-  stock: “200”,
-  price: "$80.00”,
-  manufacturer: "N/A",
-  weight: “2”
-},
-{
-  id: "0000007”,
-  name: “Rotate”,
-  description: “A round console only game that results in the console rotating at high velocity into the nearest wall.”,
-  category: “Game”,
-  stock: “200”,
-  price: "$80.00”,
-  manufacturer: "N/A",
-  weight: “2”
-},
-{
-  id: "0000008”,
-  name: “Split”,
-  description: “A split console only game that enables any game to be two player.”,
-  category: “Game”,
-  stock: “200”,
-  price: "$80.00”,
-  manufacturer: "N/A",
-  weight: “2”
-},
-{
-  id: "0000009”,
-  name: “Universal Remote”,
-  description: “A wireless remote that works for any console.”,
-  category: “Accessories”,
-  stock: “100”,
-  price: "$60.00”,
-  manufacturer: "N/A",
-  weight: “3”
-},
-{
-  id: "0000010”,
-  name: “Do Nothing Remote”,
-  description: “A remote that has hundreds of buttons that have no function.”,
-  category: “Accessories”,
-  stock: “100”,
-  price: "$510.00”,
-  manufacturer: "N/A",
-  weight: “52”
-},
-{
-  id: "0000011”,
-  name: “Motion Tracker”,
-  description: “A motion tracking device to assist consoles in tracking the user for specific games.”,
-  category: “Accessories”,
-  stock: “50”,
-  price: "$100.00”,
-  manufacturer: "N/A",
-  weight: “1”
-},
-{
-  id: "0000012”,
-  name: “Sphere”,
-  description: “When played in conjunction with running on the floating console, will result in the console having a secondary orbit from this accessory. Resulting in a moon.”,
-  category: “Accessories”,
-  stock: “10”,
-  price: "$800.00”,
-  manufacturer: "N/A",
-  weight: “20”
-},
-{
-  id: "0000013”,
-  name: “Orbit?”,
-  description: “You have successfully created a representation of our planetary orbit by using 3 of our products in a specific way.”,
-  category: “Trading Card”,
-  stock: “10”,
-  price: "$200.00”,
-  manufacturer: "N/A",
-  weight: “1”
-},
-{
-  id: "0000014”,
-  name: “Just keep Spinning”,
-  description: “You have successfully made the round console start rotating. Good luck stopping it.”,
-  category: “Trading Card”,
-  stock: “10”,
-  price: "$200.00”,
-  manufacturer: "N/A",
-  weight: “1”
-},
-{
-  id: "0000015”,
-  name: “You broke your console.”,
-  description: “The most common trading card. These consoles are very fragile.”,
-  category: “Trading Card”,
-  stock: “100”,
-  price: "$10.00”,
-  manufacturer: "N/A",
-  weight: “1”
-},
-{
-  id: "0000016”,
-  name: “How?!”,
-  description: “You somehow got your console to play football. Congrats?”,
-  category: “Trading Card”,
-  stock: “10”,
-  price: "$200.00”,
-  manufacturer: "N/A",
-  weight: “1”
-},
-{
-  id: "0000017”,
-  name: “Meteorite”,
-  description: “One of a kind accessory that can be using in conjunction with the floating console, running, and sphere. This results in an asteroid belt forming. Can get in the way of the users’ line of sight.”,
-  category: “Collector’s Item”,
-  stock: “1”,
-  price: "$8000.00”,
-  manufacturer: "N/A",
-  weight: “500”
-},
-{
-  id: "0000018”,
-  name: “Do Something Remote”,
-  description: “A remote that does something. Nobody knows what though.”,
-  category: “Collector’s Item”,
-  stock: “1”,
-  price: "$5000.00”,
-  manufacturer: "N/A",
-  weight: “5”
-},
-{
-  id: "0000019”,
-  name: “Stop”,
-  description: “A one of a kind item that can stop the round console once it has begun rotating.”,
-  category: “Collector’s Item”,
-  stock: “1”,
-  price: "$3000.00”,
-  manufacturer: "N/A",
-  weight: “7”
-},
-{
-  id: "0000020”,
-  name: “Fix”,
-  description: “Turns the console into a normal console. Nobody has bought this yet.”,
-  category: “Collector’s Item”,
-  stock: “1”,
-  price: "$5.00”,
-  manufacturer: "N/A",
-  weight: “10”
-}
+// Test product that cannot be removed to ensure functionality
+JSONObject.product.push(
+  {
+    id: "0000000",
+    name: "Test Product",
+    description: "This is a default test product",
+    category: "misc",
+    stock: "0",
+    price: "$0.00",
+    manufacturer: "N/A",
+    weight: "0",
+    image: "images/placeholder.png",
+  },
+
+  // Consoles
+  {
+    id: "1000001",
+    name: "Nintendo Entertainment System (NES)",
+    description: "Classic 8-bit Nintendo console from the 80s",
+    category: "Console",
+    stock: "6",
+    price: "$129.99",
+    manufacturer: "Nintendo",
+    weight: "5",
+    image: "images/placeholder.png",
+  },
+  {
+    id: "1000002",
+    name: "Super Nintendo Entertainment System (SNES)",
+    description: "16-bit successor to the NES, a fan favorite",
+    category: "Console",
+    stock: "4",
+    price: "$149.99",
+    manufacturer: "Nintendo",
+    weight: "5.5",
+    image: "images/snes.jpg",
+  },
+  {
+    id: "1000003",
+    name: "Sega Genesis Model 2",
+    description: "Sega’s best-selling 16-bit console",
+    category: "Console",
+    stock: "3",
+    price: "$99.99",
+    manufacturer: "Sega",
+    weight: "4",
+    image: "images/genesis.jpg",
+  },
+  {
+    id: "1000004",
+    name: "Sony PlayStation 2",
+    description: "Best-selling home console of all time",
+    category: "Console",
+    stock: "8",
+    price: "$109.99",
+    manufacturer: "Sony",
+    weight: "6",
+    image: "images/ps2.jpg",
+  },
+
+  // Games
+  {
+    id: "2000001",
+    name: "Super Mario Bros. 3",
+    description: "Iconic NES platformer loved by millions",
+    category: "Game",
+    stock: "10",
+    price: "$39.99",
+    manufacturer: "Nintendo",
+    weight: "0.2",
+    image: "images/mario3.jpg",
+  },
+  {
+    id: "2000002",
+    name: "Chrono Trigger",
+    description: "Legendary RPG for the SNES",
+    category: "Game",
+    stock: "2",
+    price: "$129.99",
+    manufacturer: "Square",
+    weight: "0.25",
+    image: "images/chrono.jpg",
+  },
+  {
+    id: "2000003",
+    name: "Sonic the Hedgehog 2",
+    description: "Fast-paced platformer for Sega Genesis",
+    category: "Game",
+    stock: "6",
+    price: "$34.99",
+    manufacturer: "Sega",
+    weight: "0.2",
+    image: "images/sonic2.jpg",
+  },
+  {
+    id: "2000004",
+    name: "Final Fantasy X",
+    description: "Epic PS2 RPG with a deep storyline",
+    category: "Game",
+    stock: "5",
+    price: "$24.99",
+    manufacturer: "Square Enix",
+    weight: "0.3",
+    image: "images/ffx.jpg",
+  },
+
+  // Accessories
+  {
+    id: "3000001",
+    name: "NES Controller",
+    description: "Original controller for the Nintendo Entertainment System",
+    category: "Accessories",
+    stock: "20",
+    price: "$24.99",
+    manufacturer: "Nintendo",
+    weight: "0.4",
+    image: "images/nes-controller.jpg",
+  },
+  {
+    id: "3000002",
+    name: "SNES Mouse",
+    description: "Peripheral used for Mario Paint",
+    category: "Accessories",
+    stock: "8",
+    price: "$29.99",
+    manufacturer: "Nintendo",
+    weight: "0.5",
+    image: "images/snes-mouse.jpg",
+  },
+  {
+    id: "3000003",
+    name: "Genesis 6-Button Controller",
+    description: "Improved Sega Genesis controller for fighting games",
+    category: "Accessories",
+    stock: "15",
+    price: "$19.99",
+    manufacturer: "Sega",
+    weight: "0.4",
+    image: "images/genesis-controller.jpg",
+  },
+  {
+    id: "3000004",
+    name: "PS2 Memory Card (8MB)",
+    description: "Official memory card for saving PS2 games",
+    category: "Accessories",
+    stock: "30",
+    price: "$14.99",
+    manufacturer: "Sony",
+    weight: "0.1",
+    image: "images/ps2-memory.jpg",
+  },
+
+  // Trading Cards
+  {
+    id: "4000001",
+    name: "Pokémon Base Set Charizard (Unlimited)",
+    description: "One of the most iconic trading cards",
+    category: "Trading Card",
+    stock: "1",
+    price: "$299.99",
+    manufacturer: "Wizards of the Coast",
+    weight: "0.05",
+    image: "images/charizard.jpg",
+  },
+  {
+    id: "4000002",
+    name: "Yu-Gi-Oh! Blue-Eyes White Dragon",
+    description: "Legendary card from the early Yu-Gi-Oh! era",
+    category: "Trading Card",
+    stock: "3",
+    price: "$89.99",
+    manufacturer: "Konami",
+    weight: "0.05",
+    image: "images/blue-eyes.jpg",
+  },
+  {
+    id: "4000003",
+    name: "Magic: The Gathering - Shivan Dragon",
+    description: "Classic red card from early MTG sets",
+    category: "Trading Card",
+    stock: "4",
+    price: "$29.99",
+    manufacturer: "Wizards of the Coast",
+    weight: "0.05",
+    image: "images/shivan.jpg",
+  },
+  {
+    id: "4000004",
+    name: "Pokémon Trainer Card - Professor Oak",
+    description: "Base set support card used in many decks",
+    category: "Trading Card",
+    stock: "10",
+    price: "$4.99",
+    manufacturer: "Wizards of the Coast",
+    weight: "0.05",
+    image: "images/prof-oak.jpg",
+  },
+
+  // Collector’s Items
+  {
+    id: "5000001",
+    name: "Original Game Boy (DMG-01)",
+    description: "The gray brick that started it all",
+    category: "Collector’s Item",
+    stock: "2",
+    price: "$149.99",
+    manufacturer: "Nintendo",
+    weight: "1.2",
+    image: "images/gameboy.jpg",
+  },
+  {
+    id: "5000002",
+    name: "Virtual Boy",
+    description: "Nintendo’s rare and infamous 3D console",
+    category: "Collector’s Item",
+    stock: "1",
+    price: "$499.99",
+    manufacturer: "Nintendo",
+    weight: "7",
+    image: "images/virtual-boy.jpg",
+  },
+  {
+    id: "5000003",
+    name: "EarthBound (Complete in Box)",
+    description: "Cult classic SNES RPG with box and manual",
+    category: "Collector’s Item",
+    stock: "1",
+    price: "$999.99",
+    manufacturer: "Nintendo",
+    weight: "1.5",
+    image: "images/earthbound.jpg",
+  },
+  {
+    id: "5000004",
+    name: "Atari 2600 Heavy Sixer",
+    description: "First production model of the Atari 2600",
+    category: "Collector’s Item",
+    stock: "1",
+    price: "$349.99",
+    manufacturer: "Atari",
+    weight: "6.5",
+    image: "images/atari.jpg",
+  }
 );
 
 // Saves data locally to be accessed more easily.
@@ -239,8 +271,8 @@ function resetAllProductForms() {
       "update_stock",
       "update_price",
       "update_manufacturer",
-      "update_weight"
-    ].forEach(id => {
+      "update_weight",
+    ].forEach((id) => {
       const el = document.getElementById(id);
       if (el) el.disabled = false;
     });
@@ -450,30 +482,30 @@ function searchProduct() {
     match.manufacturer || "";
   document.getElementById("update_weight").value = match.weight || "";
 
-// Lock test object.
-const updateFields = [
-  "update_product_id",
-  "update_product_name",
-  "update_serial_number",
-  "update_description",
-  "update_category",
-  "update_stock",
-  "update_price",
-  "update_manufacturer",
-  "update_weight"
-];
+  // Lock test object.
+  const updateFields = [
+    "update_product_id",
+    "update_product_name",
+    "update_serial_number",
+    "update_description",
+    "update_category",
+    "update_stock",
+    "update_price",
+    "update_manufacturer",
+    "update_weight",
+  ];
 
-if (match.id === "0000000") {
-  updateFields.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.disabled = true;
-  });
-} else {
-  updateFields.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.disabled = false;
-  });
-}
+  if (match.id === "0000000") {
+    updateFields.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.disabled = true;
+    });
+  } else {
+    updateFields.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.disabled = false;
+    });
+  }
 }
 
 // Save updates.
@@ -555,7 +587,6 @@ function handleUpdate() {
   alert(`Product ${id} updated.`);
 }
 
-
 // Search for deletion.
 function searchProductToDelete() {
   const input = document
@@ -612,7 +643,7 @@ function handleDelete() {
     alert("You do not have permission to delete the test product.");
     return;
   }
-  
+
   const serial = document.getElementById("delete_serial_number").value.trim();
 
   if (!id) {
