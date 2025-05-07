@@ -1,4 +1,14 @@
-README
+ReadMe:
+
+The Lootbox Store 
+(A retro game store)
+----------------------------------------------
+START DATE: January 1st, 2025  
+Authors: Howie O. Nick S. Brady R. and David F.  
+Penn State York IST 256 Store Front  
+
+END DATE: May 7th, 2025  
+----------------------------------------------
 
 This website was created as part of a group project for IST 256: Full Stack Web Development under the instruction of Professor Bob Bartell. For this assignment, each team was tasked with designing and building a fully custom e-commerce website from scratch. After forming our group, we decided to build a retro video game store, themed around classic gaming systems, accessories, and collectibles.
 
